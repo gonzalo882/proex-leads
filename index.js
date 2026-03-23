@@ -4,13 +4,7 @@ const leadsRouter = require('./routes/leads');
 
 const app = express();
 
-app.use(cors({
-  origin: [
-    'https://proex-leads.vercel.app',
-    'https://proex-leads-84vtf1u57-gonzalo882s-projects.vercel.app',
-    /\.vercel\.app$/
-  ]
-}));
+app.use(cors());
 app.use(express.json());
 
 app.get('/health', (req, res) => {
